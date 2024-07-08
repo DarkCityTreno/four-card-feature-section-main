@@ -42,7 +42,7 @@ p {
 .heading h2 {
   font-weight: 200;
   margin-bottom: 1rem;
-  width: 25ch;
+  max-width: 25ch;
 }
 
 h2 span,
