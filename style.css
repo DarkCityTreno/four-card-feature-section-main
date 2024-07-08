@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: fit-content;
+  align-self: flex-end;
+}
+
+body {
+  display: grid;
+  min-height: 100svh;
+  place-content: center;
+  font-size: 0.938rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--Very-Dark-Blue);
+  background-color: var(--Very-Light-Gray);
+}
+
+p {
+  font-weight: 400;
+  color: var(--Grayish-Blue);
+}
+
+.heading h2 {
+  font-weight: 200;
+  margin-bottom: 1rem;
+  width: 25ch;
+}
+
+h2 span,
+h2 {
+  font-weight: 600;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.tools-container > * {
+  border-top: 5px solid black;
+  padding: 1.2rem;
+  border-radius: 0.4rem;
+  line-height: 1.7;
+}
+
+.tools-container img {
+  padding: 1.5rem 0.5rem;
+}
+
+.tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 90rem;
+}
+
+.tools-container > * {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 10px 20px 1px rgb(217, 229, 252);
+}
+
+.supervisor {
+  border-color: var(--Cyan);
+}
+
+.team-builder {
+  border-color: var(--Red);
+}
+
+.karma {
+  border-color: var(--Orange);
+}
+
+.calculator {
+  border-color: var(--Blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  .tools-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .supervisor {
+    grid-row: 2;
+    grid-row: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .calculator {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+  }
+
+  .team-builder {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+
+  .heading {
+    padding-top: 0;
+  }
+
+  .heading p {
+    max-width: 31.5rem;
+  }
+
+  /* This is probably dumb but couldn't figure out the better way */
+  .heading h2 {
+    font-size: 2rem;
+  }
+}
